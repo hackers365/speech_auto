@@ -6,20 +6,22 @@
   "version": "1.0",
 
   "permissions": [
-    "https://auto.hackers365.com",
+    "*://*.google.com*",
     "notifications",
     "background",
     "storage",
     "webRequest"
   ],
+  "content_scripts": [{
+    "matches": ["*://*.google.com.hk/*"],
+    "js": ["jquery-3.1.1.min.js","trigger.js"]
+  }],
   "browser_action": {
     "default_icon": "icon.png",
     "default_popup": "popup.html"
   },
-  "options_page": "options.html",
-
   "background": {
-    "page": "autovoice.html"
+    //"page": "autovoice.html"
   }
 
 }
