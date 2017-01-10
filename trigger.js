@@ -3,6 +3,7 @@ var $pop = $('#spch')
 var record = false
 var trigger = function() {
     document.getElementById('gsri_ok0').click()
+    $('#lst-ib').val('');
     record = true
 }
 
